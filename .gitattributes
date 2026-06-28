@@ -1,0 +1,11 @@
+# Treat images as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+
+# Documentation files
+*.md linguist-documentation
+
+# XML configuration is documentation for this lab
+configs/*.xml linguist-documentation

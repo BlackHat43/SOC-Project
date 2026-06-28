@@ -1,24 +1,30 @@
 # Recovery Validation
 
-This document summarizes the disaster recovery validation performed in the SOC lab.
+This document summarizes the backup and restore validation completed in the SOC lab.
 
 ---
 
-## Recovery Objective
+## Objective
 
-The objective was to prove that important SOC-related configuration and evidence could be backed up, verified, and safely restored in a controlled test location.
+Validate that important SOC lab configuration and evidence can be backed up, verified, and restored safely.
 
 ---
 
 ## Backup Method
 
-A compressed archive was created using Linux backup utilities.
+A compressed archive was created from selected SOC lab configuration paths.
 
-The backup covered selected SOC lab configuration and supporting files, including Wazuh-related configuration, Docker Compose configuration, TheHive/Cortex-related configuration, and supporting lab files.
+The backup process used:
+
+```text
+tar
+gzip
+sha256sum
+```
 
 ---
 
-## Integrity Verification
+## Integrity Check
 
 A SHA-256 checksum was generated for the backup archive.
 
@@ -36,20 +42,18 @@ soc_lab_backup_YYYY-MM-DD_HH-MM-SS.tar.gz: OK
 
 ---
 
-## Safe Restore Test
+## Restore Test
 
-The backup was extracted into a non-production test directory:
+The archive was extracted into a safe test directory:
 
 ```text
 /tmp/soc-restore-test
 ```
 
-This avoided overwriting live configuration paths while still proving that files could be recovered.
+This validated recoverability without overwriting production paths.
 
 ---
 
 ## Result
 
-The backup archive was created successfully, the SHA-256 checksum returned OK, and the archive was safely restored into the test directory.
-
-The recovery validation was documented in TheHive comments as part of the incident response record.
+The backup archive was created successfully, the SHA-256 checksum validated successfully, and the restore test confirmed that the archived files could be recovered.

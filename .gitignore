@@ -1,4 +1,4 @@
-﻿# Private / raw evidence - do not publish
+# Private / raw evidence
 docs/figures/
 docs/manifests/
 docs/raw_screenshots/
@@ -6,7 +6,10 @@ raw_screenshots/
 *_PRIVATE_DO_NOT_UPLOAD*/
 SOC-Project_PRIVATE_DO_NOT_UPLOAD/
 
-# Reports or archives not intended for public repo
+# Internal local helper scripts
+scripts/prepare_soc_project_figures.ps1
+
+# Reports and archives
 *.zip
 *.7z
 *.rar
@@ -28,7 +31,7 @@ private*
 id_rsa*
 id_ed25519*
 
-# OS/editor files
+# OS and editor files
 .DS_Store
 Thumbs.db
 .vscode/
