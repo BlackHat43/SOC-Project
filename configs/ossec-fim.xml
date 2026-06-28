@@ -1,0 +1,3 @@
+<syscheck>
+  <directories realtime="yes" check_all="yes">/home/kali/Desktop/Final/monitored</directories>
+</syscheck>

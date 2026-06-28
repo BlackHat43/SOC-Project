@@ -1,0 +1,35 @@
+﻿# Private / raw evidence - do not publish
+docs/figures/
+docs/manifests/
+docs/raw_screenshots/
+raw_screenshots/
+*_PRIVATE_DO_NOT_UPLOAD*/
+SOC-Project_PRIVATE_DO_NOT_UPLOAD/
+
+# Reports or archives not intended for public repo
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.pdf
+
+# Secrets and environment files
+.env
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*
+secrets*
+tokens*
+private*
+id_rsa*
+id_ed25519*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
